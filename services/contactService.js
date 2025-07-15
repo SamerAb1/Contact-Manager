@@ -6,7 +6,7 @@ function addContact(contact, filePath, callback) {
         if (err && err !== 'File not found') {
             return callback(err, []);
         }
-        contacts = contacts || []; // FIX: Ensure array exists if file is missing
+        contacts = contacts || []; 
         const validation = validateContact(contact, contacts);
         if (!validation.valid) {
             return callback(validation.error, []);
